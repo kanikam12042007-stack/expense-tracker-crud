@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+        <p class="subtitle">Manage your daily expenses easily</p>
+
+        <!-- Add Expense -->
+        <div class="card">
+            <h2>Add Expense</h2>
+
+            <form id="expenseForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Expense title"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    step="0.01"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="category"
+                    placeholder="Category"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <button type="submit">Add Expense</button>
+
+            </form>
+        </div>
+
+        <!-- Total -->
+        <div class="card">
+            <h2>Total Expense</h2>
+            <h3 id="total">₹0.00</h3>
+        </div>
+
+        <!-- Expense List -->
+        <div class="card">
+            <h2>Expense List</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search expenses..."
+            >
+
+            <div id="expenseList"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
